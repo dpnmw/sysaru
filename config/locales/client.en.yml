@@ -1,6 +1,7 @@
 en:
   js:
     sysaru:
+      title: "Advance Welcome"
       admin:
         title: "Advance Welcome"
         description: "Configure the public welcome screen for unauthenticated visitors."
