@@ -2,14 +2,14 @@ import Component from "@glimmer/component";
 import { service } from "@ember/service";
 import { array } from "@ember/helper";
 import AdminConfigAreaCard from "admin/components/admin-config-area-card";
-import SysaruSettingToggle from "./setting-toggle";
-import SysaruSettingText from "./setting-text";
-import SysaruSettingTextarea from "./setting-textarea";
-import SysaruSettingColor from "./setting-color";
-import SysaruSettingEnum from "./setting-enum";
-import SysaruSettingInteger from "./setting-integer";
-import SysaruSettingImageUpload from "./setting-image-upload";
-import SysaruSettingList from "./setting-list";
+import SysaruSettingToggle from "./sysaru/setting-toggle";
+import SysaruSettingText from "./sysaru/setting-text";
+import SysaruSettingTextarea from "./sysaru/setting-textarea";
+import SysaruSettingColor from "./sysaru/setting-color";
+import SysaruSettingEnum from "./sysaru/setting-enum";
+import SysaruSettingInteger from "./sysaru/setting-integer";
+import SysaruSettingImageUpload from "./sysaru/setting-image-upload";
+import SysaruSettingList from "./sysaru/setting-list";
 
 export default class SysaruAdminSettings extends Component {
   @service siteSettings;

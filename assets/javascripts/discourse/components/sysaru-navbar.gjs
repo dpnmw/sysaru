@@ -2,10 +2,10 @@ import Component from "@glimmer/component";
 import { service } from "@ember/service";
 import { array } from "@ember/helper";
 import AdminConfigAreaCard from "admin/components/admin-config-area-card";
-import SysaruSettingToggle from "./setting-toggle";
-import SysaruSettingText from "./setting-text";
-import SysaruSettingColor from "./setting-color";
-import SysaruSettingEnum from "./setting-enum";
+import SysaruSettingToggle from "./sysaru/setting-toggle";
+import SysaruSettingText from "./sysaru/setting-text";
+import SysaruSettingColor from "./sysaru/setting-color";
+import SysaruSettingEnum from "./sysaru/setting-enum";
 
 export default class SysaruAdminNavbar extends Component {
   @service siteSettings;

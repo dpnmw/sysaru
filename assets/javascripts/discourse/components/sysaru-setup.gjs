@@ -6,8 +6,8 @@ import { i18n } from "discourse-i18n";
 import { ajax } from "discourse/lib/ajax";
 import { on } from "@ember/modifier";
 import AdminConfigAreaCard from "admin/components/admin-config-area-card";
-import SysaruSettingToggle from "./setting-toggle";
-import SysaruVerifyBadgeButton from "./verify-badge-button";
+import SysaruSettingToggle from "./sysaru/setting-toggle";
+import SysaruVerifyBadgeButton from "./sysaru/verify-badge-button";
 
 export default class SysaruAdminSetup extends Component {
   @service siteSettings;
