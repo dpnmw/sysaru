@@ -1,5 +1,5 @@
 import RouteTemplate from "ember-route-template";
-import SysaruAdminAbout from "../components/sysaru/admin-about";
+import SysaruAdminAbout from "discourse/plugins/sysaru/discourse/components/sysaru/admin-about";
 
 export default RouteTemplate(
   <template>

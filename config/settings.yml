@@ -205,22 +205,22 @@ plugins:
       - dashed
       - dotted
   sysaru_social_twitter_url:
-    default: ""
+    default: "#"
     type: string
   sysaru_social_facebook_url:
-    default: ""
+    default: "#"
     type: string
   sysaru_social_instagram_url:
-    default: ""
+    default: "#"
     type: string
   sysaru_social_youtube_url:
-    default: ""
+    default: "#"
     type: string
   sysaru_social_tiktok_url:
-    default: ""
+    default: "#"
     type: string
   sysaru_social_github_url:
-    default: ""
+    default: "#"
     type: string
 
   # ══════════════════════════════════════════
@@ -659,7 +659,7 @@ plugins:
     default: "Community Spaces"
     type: string
   sysaru_groups_count:
-    default: 5
+    default: 4
     type: integer
   sysaru_groups_selected:
     default: ""
@@ -702,7 +702,7 @@ plugins:
   # 7b. FAQ Accordion
   # ══════════════════════════════════════════
   sysaru_faq_enabled:
-    default: false
+    default: true
     type: bool
   sysaru_faq_title_enabled:
     default: true
@@ -737,10 +737,10 @@ plugins:
     default: true
     type: bool
   sysaru_ios_app_url:
-    default: ""
+    default: "#"
     type: string
   sysaru_android_app_url:
-    default: ""
+    default: "#"
     type: string
   sysaru_ios_app_badge_image_url:
     default: ""

@@ -2,16 +2,15 @@
 
 # name: sysaru
 # about: Branded public welcome screen for unauthenticated visitors
-# version: 1.0.0
+# version: 1.0.1
 # authors: DPN MEDiA WORKS
 # url: https://dpnmediaworks.com
 # meta_url: https://dpnmediaworks.com
 
 enabled_site_setting :sysaru_enabled
 
-add_admin_route "sysaru.admin.title", "sysaru", use_new_show_route: true
-
 register_asset "stylesheets/sysaru/admin.css", :admin
+register_svg_icon "sysaru"
 
 require "base64"
 

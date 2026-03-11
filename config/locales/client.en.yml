@@ -2,7 +2,7 @@ en:
   js:
     sysaru:
       admin:
-        title: "Welcome Screen"
+        title: "Advance Welcome"
         description: "Configure the public welcome screen for unauthenticated visitors."
 
         tabs:
