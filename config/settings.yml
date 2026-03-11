@@ -1,0 +1,858 @@
+plugins:
+  # ══════════════════════════════════════════
+  # Master Switch
+  # ══════════════════════════════════════════
+  sysaru_enabled:
+    default: true
+    type: bool
+
+  # ══════════════════════════════════════════
+  # Layout & Section Order
+  # ══════════════════════════════════════════
+  sysaru_section_order:
+    default: "hero|stats|about|participation|topics|groups|app_cta"
+    type: list
+
+  # ══════════════════════════════════════════
+  # Custom CSS
+  # ══════════════════════════════════════════
+  sysaru_custom_css:
+    default: ""
+    type: text_area
+
+  # ══════════════════════════════════════════
+  # SEO & Meta
+  # ══════════════════════════════════════════
+  sysaru_meta_description:
+    default: ""
+    type: string
+  sysaru_og_image_url:
+    default: ""
+    type: string
+  sysaru_favicon_url:
+    default: ""
+    type: string
+  sysaru_json_ld_enabled:
+    default: true
+    type: bool
+
+  # ══════════════════════════════════════════
+  # Branding: Logo
+  # ══════════════════════════════════════════
+  sysaru_logo_dark_url:
+    default: ""
+    type: string
+  sysaru_logo_light_url:
+    default: ""
+    type: string
+  sysaru_logo_height:
+    default: 30
+    type: integer
+    min: 16
+    max: 80
+  sysaru_logo_use_accent_color:
+    default: false
+    type: bool
+  sysaru_footer_logo_url:
+    default: ""
+    type: string
+
+  # ══════════════════════════════════════════
+  # Appearance: Color Scheme
+  # ══════════════════════════════════════════
+  sysaru_accent_color:
+    default: "d4a24e"
+    type: color
+  sysaru_accent_hover_color:
+    default: "c4922e"
+    type: color
+  sysaru_dark_bg_color:
+    default: "06060f"
+    type: color
+  sysaru_light_bg_color:
+    default: "F2F4F7"
+    type: color
+  sysaru_orb_color:
+    default: ""
+    type: color
+  sysaru_orb_opacity:
+    default: 50
+    type: integer
+    min: 0
+    max: 100
+
+  # ══════════════════════════════════════════
+  # Scroll Animations & Effects
+  # ══════════════════════════════════════════
+  sysaru_scroll_animation:
+    default: "fade_up"
+    type: enum
+    choices:
+      - fade_up
+      - fade_in
+      - slide_left
+      - slide_right
+      - zoom_in
+      - flip_up
+      - none
+
+  sysaru_staggered_reveal_enabled:
+    default: true
+    type: bool
+
+  sysaru_dynamic_background_enabled:
+    default: true
+    type: bool
+
+  sysaru_mouse_parallax_enabled:
+    default: true
+    type: bool
+
+  sysaru_scroll_progress_enabled:
+    default: true
+    type: bool
+
+  # ══════════════════════════════════════════
+  # Fonts
+  # ══════════════════════════════════════════
+  sysaru_google_font_name:
+    default: "Outfit"
+    type: string
+  sysaru_title_font_name:
+    default: ""
+    type: string
+
+  # ══════════════════════════════════════════
+  # Preloader
+  # ══════════════════════════════════════════
+  sysaru_preloader_enabled:
+    default: false
+    type: bool
+  sysaru_preloader_logo_dark_url:
+    default: ""
+    type: string
+  sysaru_preloader_logo_light_url:
+    default: ""
+    type: string
+  sysaru_preloader_bg_dark:
+    default: ""
+    type: color
+  sysaru_preloader_bg_light:
+    default: ""
+    type: color
+  sysaru_preloader_text_color_dark:
+    default: ""
+    type: color
+  sysaru_preloader_text_color_light:
+    default: ""
+    type: color
+  sysaru_preloader_bar_color:
+    default: ""
+    type: color
+  sysaru_preloader_min_duration:
+    default: 800
+    type: integer
+    min: 0
+    max: 5000
+
+  # ══════════════════════════════════════════
+  # Icons
+  # ══════════════════════════════════════════
+  sysaru_icon_library:
+    default: "none"
+    type: enum
+    choices:
+      - none
+      - fontawesome
+      - google
+
+  # ══════════════════════════════════════════
+  # 1. Navbar
+  # ══════════════════════════════════════════
+  sysaru_navbar_signin_label:
+    default: "Sign In"
+    type: string
+  sysaru_navbar_signin_enabled:
+    default: true
+    type: bool
+  sysaru_navbar_signin_color_dark:
+    default: ""
+    type: color
+  sysaru_navbar_signin_color_light:
+    default: ""
+    type: color
+  sysaru_navbar_join_label:
+    default: "Get Started"
+    type: string
+  sysaru_navbar_join_enabled:
+    default: true
+    type: bool
+  sysaru_navbar_join_color_dark:
+    default: ""
+    type: color
+  sysaru_navbar_join_color_light:
+    default: ""
+    type: color
+  sysaru_navbar_bg_color:
+    default: ""
+    type: color
+  sysaru_navbar_border_style:
+    default: "none"
+    type: enum
+    choices:
+      - none
+      - solid
+      - dashed
+      - dotted
+  sysaru_social_twitter_url:
+    default: ""
+    type: string
+  sysaru_social_facebook_url:
+    default: ""
+    type: string
+  sysaru_social_instagram_url:
+    default: ""
+    type: string
+  sysaru_social_youtube_url:
+    default: ""
+    type: string
+  sysaru_social_tiktok_url:
+    default: ""
+    type: string
+  sysaru_social_github_url:
+    default: ""
+    type: string
+
+  # ══════════════════════════════════════════
+  # 2. Hero Section
+  # ══════════════════════════════════════════
+  sysaru_hero_title:
+    default: "Welcome to Our Creative HeadQuarters"
+    type: string
+  sysaru_hero_accent_word:
+    default: 0
+    type: integer
+    min: 0
+    max: 50
+  sysaru_hero_title_size:
+    default: 0
+    type: integer
+    min: 0
+    max: 120
+  sysaru_hero_subtitle:
+    default: "Are you ready to start your creative journey?"
+    type: string
+  sysaru_hero_card_enabled:
+    default: true
+    type: bool
+  sysaru_hero_image_first:
+    default: false
+    type: bool
+  sysaru_hero_image_weight:
+    default: 1
+    type: integer
+    min: 1
+    max: 3
+  sysaru_hero_background_image_url:
+    default: ""
+    type: string
+  sysaru_hero_image_url:
+    default: ""
+    type: string
+  sysaru_hero_multiple_images_enabled:
+    default: false
+    type: bool
+  sysaru_hero_image_urls:
+    default: ""
+    type: list
+  sysaru_hero_image_max_height:
+    default: 500
+    type: integer
+    min: 100
+    max: 1200
+  sysaru_hero_primary_button_enabled:
+    default: true
+    type: bool
+  sysaru_hero_primary_button_label:
+    default: "View Latest Topics"
+    type: string
+  sysaru_hero_primary_button_url:
+    default: "/latest"
+    type: string
+  sysaru_hero_secondary_button_enabled:
+    default: true
+    type: bool
+  sysaru_hero_secondary_button_label:
+    default: "Explore Our Spaces"
+    type: string
+  sysaru_hero_secondary_button_url:
+    default: "/login"
+    type: string
+  sysaru_hero_primary_btn_color_dark:
+    default: ""
+    type: color
+  sysaru_hero_primary_btn_color_light:
+    default: ""
+    type: color
+  sysaru_hero_secondary_btn_color_dark:
+    default: ""
+    type: color
+  sysaru_hero_secondary_btn_color_light:
+    default: ""
+    type: color
+  sysaru_hero_video_url:
+    default: ""
+    type: string
+  sysaru_hero_video_button_color:
+    default: ""
+    type: color
+  sysaru_hero_video_blur_on_hover:
+    default: true
+    type: bool
+  sysaru_hero_bg_dark:
+    default: ""
+    type: color
+  sysaru_hero_bg_light:
+    default: ""
+    type: color
+  sysaru_hero_min_height:
+    default: 0
+    type: integer
+    min: 0
+    max: 2000
+  sysaru_hero_border_style:
+    default: "none"
+    type: enum
+    choices:
+      - none
+      - solid
+      - dashed
+      - dotted
+  sysaru_hero_card_bg_dark:
+    default: ""
+    type: color
+  sysaru_hero_card_bg_light:
+    default: ""
+    type: color
+  sysaru_hero_card_opacity:
+    default: "0.85"
+    type: string
+
+  # ══════════════════════════════════════════
+  # 3. Premium Stats Section
+  # ══════════════════════════════════════════
+  sysaru_stats_enabled:
+    default: true
+    type: bool
+  sysaru_stat_labels_enabled:
+    default: true
+    type: bool
+  sysaru_stats_title_enabled:
+    default: true
+    type: bool
+  sysaru_stats_title:
+    default: "Premium Stats"
+    type: string
+  sysaru_stat_card_style:
+    default: "rectangle"
+    type: enum
+    choices:
+      - rectangle
+      - rounded
+      - pill
+      - minimal
+  sysaru_stat_icon_color:
+    default: "d4a24e"
+    type: color
+  sysaru_stat_icon_bg_color:
+    default: ""
+    type: color
+  sysaru_stat_icon_shape:
+    default: "circle"
+    type: enum
+    choices:
+      - circle
+      - rounded
+  sysaru_stat_counter_color:
+    default: ""
+    type: color
+  sysaru_stat_members_label:
+    default: "Members"
+    type: string
+  sysaru_stat_topics_label:
+    default: "Topics"
+    type: string
+  sysaru_stat_posts_label:
+    default: "Posts"
+    type: string
+  sysaru_stat_likes_label:
+    default: "Likes"
+    type: string
+  sysaru_stat_chats_label:
+    default: "Chats"
+    type: string
+  sysaru_stat_round_numbers:
+    default: false
+    type: bool
+  sysaru_stat_card_bg_dark:
+    default: ""
+    type: color
+  sysaru_stat_card_bg_light:
+    default: ""
+    type: color
+  sysaru_stats_bg_dark:
+    default: ""
+    type: color
+  sysaru_stats_bg_light:
+    default: ""
+    type: color
+  sysaru_stats_min_height:
+    default: 0
+    type: integer
+    min: 0
+    max: 2000
+  sysaru_stats_border_style:
+    default: "none"
+    type: enum
+    choices:
+      - none
+      - solid
+      - dashed
+      - dotted
+  sysaru_stats_title_size:
+    default: 0
+    type: integer
+    min: 0
+    max: 80
+
+  # ══════════════════════════════════════════
+  # 4. About Community Section
+  # ══════════════════════════════════════════
+  sysaru_about_enabled:
+    default: true
+    type: bool
+  sysaru_about_heading_enabled:
+    default: true
+    type: bool
+  sysaru_about_heading:
+    default: "About Community"
+    type: string
+  sysaru_about_title:
+    default: "Community Name"
+    type: string
+  sysaru_about_role:
+    default: ""
+    type: string
+  sysaru_about_body:
+    default: ""
+    type: string
+  sysaru_about_image_url:
+    default: ""
+    type: string
+  sysaru_about_card_color_dark:
+    default: ""
+    type: color
+  sysaru_about_card_color_light:
+    default: ""
+    type: color
+  sysaru_about_background_image_url:
+    default: ""
+    type: string
+  sysaru_about_bg_dark:
+    default: ""
+    type: color
+  sysaru_about_bg_light:
+    default: ""
+    type: color
+  sysaru_about_min_height:
+    default: 0
+    type: integer
+    min: 0
+    max: 2000
+  sysaru_about_border_style:
+    default: "none"
+    type: enum
+    choices:
+      - none
+      - solid
+      - dashed
+      - dotted
+  sysaru_about_title_size:
+    default: 0
+    type: integer
+    min: 0
+    max: 80
+
+  # ══════════════════════════════════════════
+  # 5. Trending Discussions Section
+  # ══════════════════════════════════════════
+  sysaru_topics_enabled:
+    default: true
+    type: bool
+  sysaru_topics_title_enabled:
+    default: true
+    type: bool
+  sysaru_topics_title:
+    default: "Trending Discussions"
+    type: string
+  sysaru_topics_count:
+    default: 5
+    type: integer
+  sysaru_topics_card_bg_dark:
+    default: ""
+    type: color
+  sysaru_topics_card_bg_light:
+    default: ""
+    type: color
+  sysaru_topics_bg_dark:
+    default: ""
+    type: color
+  sysaru_topics_bg_light:
+    default: ""
+    type: color
+  sysaru_topics_min_height:
+    default: 0
+    type: integer
+    min: 0
+    max: 2000
+  sysaru_topics_border_style:
+    default: "none"
+    type: enum
+    choices:
+      - none
+      - solid
+      - dashed
+      - dotted
+  sysaru_topics_title_size:
+    default: 0
+    type: integer
+    min: 0
+    max: 80
+
+  # ══════════════════════════════════════════
+  # 6. Hero Creators (Top 3 in Hero)
+  # ══════════════════════════════════════════
+  sysaru_contributors_enabled:
+    default: true
+    type: bool
+  sysaru_contributors_title:
+    default: "Top Creators"
+    type: string
+  sysaru_contributors_title_enabled:
+    default: true
+    type: bool
+  sysaru_contributors_count_label:
+    default: "Cheers"
+    type: string
+  sysaru_contributors_count_label_enabled:
+    default: true
+    type: bool
+  sysaru_contributors_alignment:
+    default: "center"
+    type: enum
+    choices:
+      - center
+      - left
+  sysaru_contributors_pill_max_width:
+    default: 340
+    type: integer
+    min: 200
+    max: 600
+  sysaru_contributors_pill_bg_dark:
+    default: ""
+    type: color
+  sysaru_contributors_pill_bg_light:
+    default: ""
+    type: color
+  sysaru_contributors_days:
+    default: 30
+    type: integer
+  sysaru_contributors_count:
+    default: 10
+    type: integer
+
+  # ══════════════════════════════════════════
+  # 5b. Participation (Leaderboard Bios)
+  # ══════════════════════════════════════════
+  sysaru_participation_enabled:
+    default: true
+    type: bool
+  sysaru_participation_title_enabled:
+    default: true
+    type: bool
+  sysaru_participation_title:
+    default: "Participation"
+    type: string
+  sysaru_participation_bio_max_length:
+    default: 150
+    type: integer
+    min: 50
+    max: 500
+  sysaru_participation_icon_color:
+    default: ""
+    type: color
+  sysaru_participation_card_bg_dark:
+    default: ""
+    type: color
+  sysaru_participation_card_bg_light:
+    default: ""
+    type: color
+  sysaru_participation_bg_dark:
+    default: ""
+    type: color
+  sysaru_participation_bg_light:
+    default: ""
+    type: color
+  sysaru_participation_min_height:
+    default: 0
+    type: integer
+    min: 0
+    max: 2000
+  sysaru_participation_border_style:
+    default: "none"
+    type: enum
+    choices:
+      - none
+      - solid
+      - dashed
+      - dotted
+  sysaru_participation_title_size:
+    default: 0
+    type: integer
+    min: 0
+    max: 80
+  sysaru_participation_topics_label:
+    default: "Topics"
+    type: string
+  sysaru_participation_posts_label:
+    default: "Posts"
+    type: string
+  sysaru_participation_likes_label:
+    default: "Likes"
+    type: string
+  sysaru_participation_stat_color:
+    default: ""
+    type: color
+  sysaru_participation_stat_label_color:
+    default: ""
+    type: color
+  sysaru_participation_bio_color:
+    default: ""
+    type: color
+  sysaru_participation_name_color:
+    default: ""
+    type: color
+  sysaru_participation_meta_color:
+    default: ""
+    type: color
+
+  # ══════════════════════════════════════════
+  # 7. Community Spaces Section
+  # ══════════════════════════════════════════
+  sysaru_groups_enabled:
+    default: true
+    type: bool
+  sysaru_groups_title_enabled:
+    default: true
+    type: bool
+  sysaru_groups_title:
+    default: "Community Spaces"
+    type: string
+  sysaru_groups_count:
+    default: 5
+    type: integer
+  sysaru_groups_selected:
+    default: ""
+    type: list
+  sysaru_groups_card_bg_dark:
+    default: ""
+    type: color
+  sysaru_groups_card_bg_light:
+    default: ""
+    type: color
+  sysaru_splits_background_image_url:
+    default: ""
+    type: string
+  sysaru_splits_bg_dark:
+    default: ""
+    type: color
+  sysaru_splits_bg_light:
+    default: ""
+    type: color
+  sysaru_splits_min_height:
+    default: 0
+    type: integer
+    min: 0
+    max: 800
+  sysaru_groups_show_description:
+    default: true
+    type: bool
+  sysaru_groups_description_max_length:
+    default: 100
+    type: integer
+    min: 30
+    max: 500
+  sysaru_groups_title_size:
+    default: 0
+    type: integer
+    min: 0
+    max: 80
+
+  # ══════════════════════════════════════════
+  # 7b. FAQ Accordion
+  # ══════════════════════════════════════════
+  sysaru_faq_enabled:
+    default: false
+    type: bool
+  sysaru_faq_title_enabled:
+    default: true
+    type: bool
+  sysaru_faq_title:
+    default: "Frequently Asked Questions"
+    type: string
+  sysaru_faq_items:
+    default: '[{"q":"What is this community about?","a":"A creative community focused on sharing knowledge and building together."},{"q":"How do I join?","a":"Click the Get Started button to create your free account."},{"q":"Is it free?","a":"Yes! Basic membership is completely free."}]'
+    type: text_area
+  sysaru_faq_title_size:
+    default: 0
+    type: integer
+    min: 0
+    max: 80
+  sysaru_faq_card_bg_dark:
+    default: ""
+    type: color
+  sysaru_faq_card_bg_light:
+    default: ""
+    type: color
+  sysaru_faq_mobile_max_height:
+    default: 0
+    type: integer
+    min: 0
+    max: 1200
+
+  # ══════════════════════════════════════════
+  # 8. App Download CTA Section
+  # ══════════════════════════════════════════
+  sysaru_show_app_ctas:
+    default: true
+    type: bool
+  sysaru_ios_app_url:
+    default: ""
+    type: string
+  sysaru_android_app_url:
+    default: ""
+    type: string
+  sysaru_ios_app_badge_image_url:
+    default: ""
+    type: string
+  sysaru_android_app_badge_image_url:
+    default: ""
+    type: string
+  sysaru_app_badge_height:
+    default: 45
+    type: integer
+    min: 30
+    max: 80
+  sysaru_app_badge_style:
+    default: "rounded"
+    type: enum
+    choices:
+      - rounded
+      - pill
+      - square
+  sysaru_app_cta_headline:
+    default: "Get the best experience on our app"
+    type: string
+  sysaru_app_cta_subtext:
+    default: "Available free on iOS and Android"
+    type: string
+  sysaru_app_cta_gradient_start_dark:
+    default: "1a1a2e"
+    type: color
+  sysaru_app_cta_gradient_start_light:
+    default: "e8edf3"
+    type: color
+  sysaru_app_cta_gradient_mid_dark:
+    default: "16213e"
+    type: color
+  sysaru_app_cta_gradient_mid_light:
+    default: "dce3ed"
+    type: color
+  sysaru_app_cta_gradient_end_dark:
+    default: "0f3460"
+    type: color
+  sysaru_app_cta_gradient_end_light:
+    default: "cdd8e8"
+    type: color
+  sysaru_app_cta_image_url:
+    default: ""
+    type: string
+  sysaru_app_cta_bg_dark:
+    default: ""
+    type: color
+  sysaru_app_cta_bg_light:
+    default: ""
+    type: color
+  sysaru_app_cta_min_height:
+    default: 0
+    type: integer
+    min: 0
+    max: 2000
+  sysaru_app_cta_border_style:
+    default: "none"
+    type: enum
+    choices:
+      - none
+      - solid
+      - dashed
+      - dotted
+  sysaru_app_cta_title_size:
+    default: 0
+    type: integer
+    min: 0
+    max: 80
+  sysaru_app_cta_headline_color_dark:
+    default: ""
+    type: color
+  sysaru_app_cta_headline_color_light:
+    default: ""
+    type: color
+  sysaru_app_cta_subtext_color_dark:
+    default: ""
+    type: color
+  sysaru_app_cta_subtext_color_light:
+    default: ""
+    type: color
+
+  # ══════════════════════════════════════════
+  # 9. Footer
+  # ══════════════════════════════════════════
+  sysaru_footer_description:
+    default: ""
+    type: string
+  sysaru_footer_text:
+    default: ""
+    type: string
+  sysaru_footer_links:
+    default: '[{"label":"Brand","url":"/about"},{"label":"Links","url":"/links"},{"label":"Terms","url":"/tos"},{"label":"Privacy","url":"/privacy"}]'
+    type: string
+  sysaru_footer_bg_dark:
+    default: ""
+    type: color
+  sysaru_footer_bg_light:
+    default: ""
+    type: color
+  sysaru_footer_text_color_dark:
+    default: ""
+    type: color
+  sysaru_footer_text_color_light:
+    default: ""
+    type: color
+  sysaru_footer_border_style:
+    default: "solid"
+    type: enum
+    choices:
+      - none
+      - solid
+      - dashed
+      - dotted

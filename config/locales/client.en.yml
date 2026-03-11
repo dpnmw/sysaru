@@ -1,0 +1,111 @@
+en:
+  js:
+    sysaru:
+      admin:
+        title: "Welcome Screen"
+        description: "Configure the public welcome screen for unauthenticated visitors."
+
+        tabs:
+          setup: "Setup"
+          settings: "Settings"
+          navbar: "Navbar"
+          hero: "Hero"
+          participation: "Participation"
+          stats: "Stats"
+          about: "About"
+          topics: "Topics"
+          splits: "Splits"
+          app_cta: "App CTA"
+          footer: "Footer"
+
+        setup:
+          plugin_info: "Plugin Information"
+          version: "Version"
+          author: "Author"
+          enable_plugin: "Enable Plugin"
+          enable_label: "Welcome Screen"
+          enable_description: "Enable the welcome screen landing page for unauthenticated visitors."
+          developer: "Developer"
+          support_message: "Sysaru is free and open source. Consider supporting the developer to keep the project maintained and updated."
+          support_developer: "Support the Developer"
+          remove_badge_message: "Purchase a license to remove the developer badge from your landing page."
+          remove_badge: "Remove Developer Badge"
+          verify_payment: "Verify Payment"
+          verify_checking: "Checking..."
+          verify_success: "Badge verified and removed successfully."
+          verify_failed: "Domain not registered. Complete a purchase first."
+          badge_verified: "Badge Removed"
+          badge_verified_message: "Your domain has been verified. The developer badge has been removed from your landing page."
+
+        settings:
+          layout: "Layout & Section Order"
+          seo: "SEO & Meta Tags"
+          branding: "Branding & Logo"
+          colors: "Color Scheme"
+          animations: "Scroll Animations & Effects"
+          fonts: "Fonts"
+          icons: "Icon Library"
+          preloader: "Preloader"
+
+        navbar:
+          auth_buttons: "Authentication Buttons"
+          appearance: "Navbar Appearance"
+          social_links: "Social Media Links"
+
+        hero:
+          content: "Content"
+          layout: "Layout"
+          images: "Images"
+          buttons: "Call-to-Action Buttons"
+          video: "Video"
+          section_styling: "Section Styling"
+          card_styling: "Card Styling"
+          contributors: "Hero Creators"
+
+        participation:
+          general: "General"
+          stat_labels: "Stat Labels"
+          styling: "Styling"
+
+        stats:
+          general: "General"
+          labels: "Counter Labels"
+          card_styling: "Card Styling"
+          section_styling: "Section Styling"
+
+        about:
+          content: "Content"
+          card_styling: "Card Styling"
+          section_styling: "Section Styling"
+
+        topics:
+          content: "Content"
+          styling: "Styling"
+
+        splits:
+          section_styling: "Section Background"
+          spaces: "Community Spaces"
+          faq: "FAQ Accordion"
+
+        app_cta:
+          general: "General"
+          badges: "App Store Badges"
+          gradient: "Gradient Colors"
+          styling: "Section Styling"
+
+        footer:
+          content: "Content"
+          styling: "Styling"
+
+        disabled_notice: "%{section} is currently disabled. Enable it above to configure these settings."
+
+        upload:
+          button: "Upload"
+          remove: "Remove"
+          uploading: "Uploading..."
+          pin_failed: "Failed to pin upload"
+
+        save:
+          saving: "Saving..."
+          saved: "Saved"
+          error: "Error saving"

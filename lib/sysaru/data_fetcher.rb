@@ -1,0 +1,88 @@
+# frozen_string_literal: true
+
+module Sysaru
+  class DataFetcher
+    def self.fetch
+      s = SiteSetting
+      data = {}
+
+      # Top contributors
+      data[:contributors] = begin
+        if s.sysaru_contributors_enabled || (s.sysaru_participation_enabled rescue true)
+          User
+            .joins(:posts)
+            .includes(:user_profile, :user_stat)
+            .where(posts: { created_at: s.sysaru_contributors_days.days.ago.. })
+            .where.not(username: %w[system discobot])
+            .where(active: true, staged: false)
+            .group("users.id")
+            .order("COUNT(posts.id) DESC")
+            .limit(s.sysaru_contributors_count)
+            .select("users.*, COUNT(posts.id) AS post_count")
+        end
+      rescue => e
+        Rails.logger.warn("[Sysaru] contributors fetch failed: #{e.message}")
+        nil
+      end
+
+      # Public groups — optionally filtered by selected names
+      data[:groups] = begin
+        if s.sysaru_groups_enabled
+          selected = s.sysaru_groups_selected.presence
+          scope = Group
+            .where(visibility_level: Group.visibility_levels[:public])
+            .where(automatic: false)
+
+          if selected
+            names = selected.split("|").map(&:strip).reject(&:empty?)
+            scope = scope.where(name: names) if names.any?
+          end
+
+          scope.limit(s.sysaru_groups_count)
+        end
+      rescue => e
+        Rails.logger.warn("[Sysaru] groups fetch failed: #{e.message}")
+        nil
+      end
+
+      # Trending topics
+      data[:topics] = begin
+        if s.sysaru_topics_enabled
+          Topic
+            .listable_topics
+            .where(visible: true)
+            .where("topics.created_at > ?", 30.days.ago)
+            .order(posts_count: :desc)
+            .limit(s.sysaru_topics_count)
+            .includes(:category, :user)
+        end
+      rescue => e
+        Rails.logger.warn("[Sysaru] topics fetch failed: #{e.message}")
+        nil
+      end
+
+      # Aggregate stats
+      chat_count = 0
+      begin
+        chat_count = Chat::Message.count if defined?(Chat::Message)
+      rescue
+        chat_count = 0
+      end
+
+      data[:stats] = begin
+        {
+          members: User.real.count,
+          topics:  Topic.listable_topics.count,
+          posts:   Post.where(user_deleted: false).count,
+          likes:   Post.sum(:like_count),
+          chats:   chat_count,
+        }
+      rescue => e
+        Rails.logger.warn("[Sysaru] stats fetch failed: #{e.message}")
+        { members: 0, topics: 0, posts: 0, likes: 0, chats: 0 }
+      end
+
+      data
+    end
+  end
+end
