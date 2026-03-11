@@ -2334,7 +2334,6 @@ html, .cl-body {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 .cl-designer-badge:hover {
-  transform: scale(1.08);
   opacity: 1;
 }
 .cl-designer-badge__logo {
