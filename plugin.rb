@@ -8,6 +8,7 @@
 # meta_url: https://dpnmediaworks.com
 
 enabled_site_setting :sysaru_enabled
+add_admin_route "sysaru.admin.title", "sysaru", use_new_show_route: true
 
 register_asset "stylesheets/sysaru/admin.css", :admin
 register_svg_icon "sysaru"
