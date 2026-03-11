@@ -445,7 +445,7 @@ module Sysaru
 
       about_body       = @s.sysaru_about_body.presence || ""
       about_image      = @s.sysaru_about_image_url.presence
-      about_role       = @s.sysaru_about_role.presence || @s.title
+      about_role       = @s.sysaru_about_manager.presence || ""
       about_heading_on = @s.sysaru_about_heading_enabled rescue true
       about_heading    = @s.sysaru_about_heading.presence || "About Community"
       about_bg_img     = @s.sysaru_about_background_image_url.presence

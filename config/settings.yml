@@ -283,7 +283,7 @@ plugins:
     default: true
     type: bool
   sysaru_hero_secondary_button_label:
-    default: "Explore Our Spaces"
+    default: "Explore Our Groups"
     type: string
   sysaru_hero_secondary_button_url:
     default: "/login"
@@ -426,7 +426,7 @@ plugins:
     max: 80
 
   # ══════════════════════════════════════════
-  # 4. About Community Section
+  # 4. About the Community Section
   # ══════════════════════════════════════════
   sysaru_about_enabled:
     default: true
@@ -435,16 +435,16 @@ plugins:
     default: true
     type: bool
   sysaru_about_heading:
-    default: "About Community"
+    default: "About the Community"
     type: string
   sysaru_about_title:
-    default: "Community Name"
+    default: "Community Manager"
     type: string
-  sysaru_about_role:
-    default: ""
+  sysaru_about_manager:
+    default: "John/Jane Doe"
     type: string
   sysaru_about_body:
-    default: ""
+    default: "Sysaru is a fully customizable welcome screen plugin for Discourse that transforms your homepage into a branded landing experience for unauthenticated visitors. With over 176 settings across 11 admin tabs, it gives you complete control over every section — from hero banners and animated stats to community groups, FAQ accordions, and app download CTAs. Built with server-rendered HTML for fast load times and SEO, Sysaru integrates seamlessly with your existing Discourse theme and supports both dark and light color schemes out of the box."
     type: string
   sysaru_about_image_url:
     default: ""
@@ -484,7 +484,7 @@ plugins:
     max: 80
 
   # ══════════════════════════════════════════
-  # 5. Trending Discussions Section
+  # 5. Latest Topics Section
   # ══════════════════════════════════════════
   sysaru_topics_enabled:
     default: true
@@ -493,10 +493,10 @@ plugins:
     default: true
     type: bool
   sysaru_topics_title:
-    default: "Trending Discussions"
+    default: "Latest Topics"
     type: string
   sysaru_topics_count:
-    default: 5
+    default: 4
     type: integer
   sysaru_topics_card_bg_dark:
     default: ""
@@ -548,7 +548,7 @@ plugins:
     default: true
     type: bool
   sysaru_contributors_alignment:
-    default: "center"
+    default: "left"
     type: enum
     choices:
       - center
@@ -647,7 +647,7 @@ plugins:
     type: color
 
   # ══════════════════════════════════════════
-  # 7. Community Spaces Section
+  # 7. Community Groups Section
   # ══════════════════════════════════════════
   sysaru_groups_enabled:
     default: true
@@ -656,7 +656,7 @@ plugins:
     default: true
     type: bool
   sysaru_groups_title:
-    default: "Community Spaces"
+    default: "Community Groups"
     type: string
   sysaru_groups_count:
     default: 4
