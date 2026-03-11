@@ -8,7 +8,6 @@
 # meta_url: https://dpnmediaworks.com
 
 enabled_site_setting :sysaru_enabled
-add_admin_route "sysaru.admin.title", "sysaru", use_new_show_route: true
 
 register_asset "stylesheets/sysaru/admin.css", :admin
 register_svg_icon "sysaru"
@@ -16,6 +15,8 @@ register_svg_icon "sysaru"
 require "base64"
 
 after_initialize do
+  add_admin_route("sysaru.admin.title", "sysaru", { use_new_show_route: true })
+
   module ::Sysaru
     PLUGIN_NAME = "sysaru"
     PLUGIN_DIR  = File.expand_path("..", __FILE__)
