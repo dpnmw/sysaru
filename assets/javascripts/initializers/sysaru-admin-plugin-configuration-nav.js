@@ -12,10 +12,6 @@ export default {
     withPluginApi("1.1.0", (api) => {
       api.addAdminPluginConfigurationNav("sysaru", [
         {
-          label: "sysaru.admin.tabs.setup",
-          route: "adminPlugins.show.sysaru-setup",
-        },
-        {
           label: "sysaru.admin.tabs.navbar",
           route: "adminPlugins.show.sysaru-navbar",
         },

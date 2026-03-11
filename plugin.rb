@@ -156,8 +156,8 @@ after_initialize do
     end
   end
 
-  # ── Routes ──
-  Discourse::Application.routes.prepend do
+  # ── Admin API Routes ──
+  Discourse::Application.routes.draw do
     post "/sysaru/admin/pin-upload" =>
       "sysaru/admin_uploads#pin_upload",
       constraints: AdminConstraint.new
@@ -169,7 +169,10 @@ after_initialize do
     get "/sysaru/admin/badge-status" =>
       "sysaru/admin_verification#status",
       constraints: AdminConstraint.new
+  end
 
+  # ── Public Landing Page Route ──
+  Discourse::Application.routes.prepend do
     root to: "sysaru/landing#index",
          constraints: ->(req) {
            req.cookies["_t"].blank? &&

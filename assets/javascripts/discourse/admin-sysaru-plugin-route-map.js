@@ -2,7 +2,6 @@ export default {
   resource: "admin.adminPlugins.show",
   path: "/plugins",
   map() {
-    this.route("sysaru-setup", { path: "setup" });
     this.route("sysaru-navbar", { path: "navbar" });
     this.route("sysaru-hero", { path: "hero" });
     this.route("sysaru-participation", { path: "participation" });
