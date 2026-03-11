@@ -1,5 +1,8 @@
+import RouteTemplate from "ember-route-template";
 import SysaruAdminNavbar from "../components/sysaru/admin-navbar";
 
-<template>
-  <SysaruAdminNavbar />
-</template>
+export default RouteTemplate(
+  <template>
+    <SysaruAdminNavbar />
+  </template>
+);

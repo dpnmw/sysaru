@@ -1,5 +1,8 @@
+import RouteTemplate from "ember-route-template";
 import SysaruAdminFooter from "../components/sysaru/admin-footer";
 
-<template>
-  <SysaruAdminFooter />
-</template>
+export default RouteTemplate(
+  <template>
+    <SysaruAdminFooter />
+  </template>
+);

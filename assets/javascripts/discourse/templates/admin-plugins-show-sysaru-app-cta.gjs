@@ -1,5 +1,8 @@
+import RouteTemplate from "ember-route-template";
 import SysaruAdminAppCta from "../components/sysaru/admin-app-cta";
 
-<template>
-  <SysaruAdminAppCta />
-</template>
+export default RouteTemplate(
+  <template>
+    <SysaruAdminAppCta />
+  </template>
+);

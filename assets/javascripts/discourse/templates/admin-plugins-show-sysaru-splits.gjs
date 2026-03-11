@@ -1,5 +1,8 @@
+import RouteTemplate from "ember-route-template";
 import SysaruAdminSplits from "../components/sysaru/admin-splits";
 
-<template>
-  <SysaruAdminSplits />
-</template>
+export default RouteTemplate(
+  <template>
+    <SysaruAdminSplits />
+  </template>
+);

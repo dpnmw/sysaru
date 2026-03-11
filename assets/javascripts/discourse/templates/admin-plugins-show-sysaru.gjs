@@ -1,10 +1,10 @@
-import Component from "@glimmer/component";
+import RouteTemplate from "ember-route-template";
 import { i18n } from "discourse-i18n";
 import NavItem from "discourse/components/nav-item";
 import DPageHeader from "discourse/components/d-page-header";
 import DBreadcrumbsItem from "discourse/components/d-breadcrumbs-item";
 
-export default class SysaruAdminLayout extends Component {
+export default RouteTemplate(
   <template>
     <div class="sysaru-admin">
       <DPageHeader
@@ -81,4 +81,4 @@ export default class SysaruAdminLayout extends Component {
       </div>
     </div>
   </template>
-}
+);

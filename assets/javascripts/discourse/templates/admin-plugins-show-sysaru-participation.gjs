@@ -1,5 +1,8 @@
+import RouteTemplate from "ember-route-template";
 import SysaruAdminParticipation from "../components/sysaru/admin-participation";
 
-<template>
-  <SysaruAdminParticipation />
-</template>
+export default RouteTemplate(
+  <template>
+    <SysaruAdminParticipation />
+  </template>
+);
