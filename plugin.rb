@@ -171,11 +171,12 @@ after_initialize do
       constraints: AdminConstraint.new
   end
 
-  # ── Public Landing Page Route ──
-Discourse::Application.routes.prepend do
-  get "/", to: "sysaru/landing#index",
-      constraints: ->(req) {
-        req.cookies["_t"].blank? &&
-          SiteSetting.sysaru_enabled
-      }
+# ── Public Landing Page Route ──
+  Discourse::Application.routes.prepend do
+    get "/", to: "sysaru/landing#index",
+         constraints: ->(req) {
+           req.cookies["_t"].blank? &&
+             SiteSetting.sysaru_enabled
+         }
+  end
 end
