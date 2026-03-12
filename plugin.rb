@@ -156,20 +156,20 @@ after_initialize do
     end
   end
 
-  # ── Admin API Routes (temporarily disabled — triggers discourse-subscriptions crash on v2026.3.0) ──
-  # Discourse::Application.routes.draw do
-  #   post "/sysaru/admin/pin-upload" =>
-  #     "sysaru/admin_uploads#pin_upload",
-  #     constraints: AdminConstraint.new
-  #
-  #   get "/sysaru/admin/verify-badge" =>
-  #     "sysaru/admin_verification#verify",
-  #     constraints: AdminConstraint.new
-  #
-  #   get "/sysaru/admin/badge-status" =>
-  #     "sysaru/admin_verification#status",
-  #     constraints: AdminConstraint.new
-  # end
+  # ── Admin API Routes ──
+  Discourse::Application.routes.draw do
+    post "/sysaru/admin/pin-upload" =>
+      "sysaru/admin_uploads#pin_upload",
+      constraints: AdminConstraint.new
+
+    get "/sysaru/admin/verify-badge" =>
+      "sysaru/admin_verification#verify",
+      constraints: AdminConstraint.new
+
+    get "/sysaru/admin/badge-status" =>
+      "sysaru/admin_verification#status",
+      constraints: AdminConstraint.new
+  end
 
   # ── Public Landing Page Route ──
   Discourse::Application.routes.prepend do
