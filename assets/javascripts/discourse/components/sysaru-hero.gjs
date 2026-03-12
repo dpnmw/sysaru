@@ -1,7 +1,7 @@
 import Component from "@glimmer/component";
 import { service } from "@ember/service";
 import { array } from "@ember/helper";
-import AdminConfigAreaCard from "admin/components/admin-config-area-card";
+import AdminConfigAreaCard from "discourse/admin/components/admin-config-area-card";
 import SysaruSettingToggle from "./sysaru/setting-toggle";
 import SysaruSettingText from "./sysaru/setting-text";
 import SysaruSettingColor from "./sysaru/setting-color";
@@ -15,7 +15,7 @@ export default class SysaruAdminHero extends Component {
 
   <template>
     <div class="sysaru-admin-hero">
-      <AdminConfigAreaCard @heading="Content">
+      <AdminConfigAreaCard @heading="sysaru.admin.hero.content">
         <SysaruSettingText
           @settingName="sysaru_hero_title"
           @label="Hero Title"
@@ -38,7 +38,7 @@ export default class SysaruAdminHero extends Component {
         />
       </AdminConfigAreaCard>
 
-      <AdminConfigAreaCard @heading="Layout">
+      <AdminConfigAreaCard @heading="sysaru.admin.hero.layout">
         <SysaruSettingToggle
           @settingName="sysaru_hero_card_enabled"
           @label="Hero Card Enabled"
@@ -55,7 +55,7 @@ export default class SysaruAdminHero extends Component {
         />
       </AdminConfigAreaCard>
 
-      <AdminConfigAreaCard @heading="Images">
+      <AdminConfigAreaCard @heading="sysaru.admin.hero.images">
         <SysaruSettingImageUpload
           @settingName="sysaru_hero_background_image_url"
           @label="Hero Background Image URL"
@@ -80,7 +80,7 @@ export default class SysaruAdminHero extends Component {
         />
       </AdminConfigAreaCard>
 
-      <AdminConfigAreaCard @heading="Buttons">
+      <AdminConfigAreaCard @heading="sysaru.admin.hero.buttons">
         <SysaruSettingToggle
           @settingName="sysaru_hero_primary_button_enabled"
           @label="Primary Button Enabled"
@@ -123,7 +123,7 @@ export default class SysaruAdminHero extends Component {
         />
       </AdminConfigAreaCard>
 
-      <AdminConfigAreaCard @heading="Video">
+      <AdminConfigAreaCard @heading="sysaru.admin.hero.video">
         <SysaruSettingText
           @settingName="sysaru_hero_video_url"
           @label="Hero Video URL"
@@ -138,7 +138,7 @@ export default class SysaruAdminHero extends Component {
         />
       </AdminConfigAreaCard>
 
-      <AdminConfigAreaCard @heading="Section Styling">
+      <AdminConfigAreaCard @heading="sysaru.admin.hero.section_styling">
         <SysaruSettingColor
           @settingName="sysaru_hero_bg_dark"
           @label="Hero Background Dark"
@@ -160,7 +160,7 @@ export default class SysaruAdminHero extends Component {
         />
       </AdminConfigAreaCard>
 
-      <AdminConfigAreaCard @heading="Card Styling">
+      <AdminConfigAreaCard @heading="sysaru.admin.hero.card_styling">
         <SysaruSettingColor
           @settingName="sysaru_hero_card_bg_dark"
           @label="Hero Card Background Dark"
@@ -176,7 +176,7 @@ export default class SysaruAdminHero extends Component {
         />
       </AdminConfigAreaCard>
 
-      <AdminConfigAreaCard @heading="Contributors">
+      <AdminConfigAreaCard @heading="sysaru.admin.hero.contributors">
         <SysaruSettingToggle
           @settingName="sysaru_contributors_enabled"
           @label="Contributors Enabled"

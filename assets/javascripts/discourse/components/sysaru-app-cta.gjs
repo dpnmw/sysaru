@@ -1,7 +1,7 @@
 import Component from "@glimmer/component";
 import { service } from "@ember/service";
 import { array } from "@ember/helper";
-import AdminConfigAreaCard from "admin/components/admin-config-area-card";
+import AdminConfigAreaCard from "discourse/admin/components/admin-config-area-card";
 import SysaruSettingToggle from "./sysaru/setting-toggle";
 import SysaruSettingText from "./sysaru/setting-text";
 import SysaruSettingColor from "./sysaru/setting-color";
@@ -23,7 +23,7 @@ export default class SysaruAdminAppCta extends Component {
         <SysaruSectionDisabledNotice @section="App CTA" />
       {{/unless}}
 
-      <AdminConfigAreaCard @heading="General">
+      <AdminConfigAreaCard @heading="sysaru.admin.app_cta.general">
         <SysaruSettingToggle
           @settingName="sysaru_show_app_ctas"
           @label="Show App CTAs"
@@ -48,7 +48,7 @@ export default class SysaruAdminAppCta extends Component {
         />
       </AdminConfigAreaCard>
 
-      <AdminConfigAreaCard @heading="Badges">
+      <AdminConfigAreaCard @heading="sysaru.admin.app_cta.badges">
         <SysaruSettingText
           @settingName="sysaru_ios_app_url"
           @label="iOS App URL"
@@ -78,7 +78,7 @@ export default class SysaruAdminAppCta extends Component {
         />
       </AdminConfigAreaCard>
 
-      <AdminConfigAreaCard @heading="Gradient">
+      <AdminConfigAreaCard @heading="sysaru.admin.app_cta.gradient">
         <SysaruSettingColor
           @settingName="sysaru_app_cta_gradient_start_dark"
           @label="Gradient Start Dark"
@@ -121,7 +121,7 @@ export default class SysaruAdminAppCta extends Component {
         />
       </AdminConfigAreaCard>
 
-      <AdminConfigAreaCard @heading="Section Styling">
+      <AdminConfigAreaCard @heading="sysaru.admin.app_cta.styling">
         <SysaruSettingColor
           @settingName="sysaru_app_cta_bg_dark"
           @label="Section Background Dark"

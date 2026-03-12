@@ -1,7 +1,7 @@
 import Component from "@glimmer/component";
 import { service } from "@ember/service";
 import { array } from "@ember/helper";
-import AdminConfigAreaCard from "admin/components/admin-config-area-card";
+import AdminConfigAreaCard from "discourse/admin/components/admin-config-area-card";
 import SysaruSettingText from "./sysaru/setting-text";
 import SysaruSettingColor from "./sysaru/setting-color";
 import SysaruSettingEnum from "./sysaru/setting-enum";
@@ -11,7 +11,7 @@ export default class SysaruAdminFooter extends Component {
 
   <template>
     <div class="sysaru-admin-footer">
-      <AdminConfigAreaCard @heading="Content">
+      <AdminConfigAreaCard @heading="sysaru.admin.footer.content">
         <SysaruSettingText
           @settingName="sysaru_footer_description"
           @label="Footer Description"
@@ -27,7 +27,7 @@ export default class SysaruAdminFooter extends Component {
         />
       </AdminConfigAreaCard>
 
-      <AdminConfigAreaCard @heading="Styling">
+      <AdminConfigAreaCard @heading="sysaru.admin.footer.styling">
         <SysaruSettingColor
           @settingName="sysaru_footer_bg_dark"
           @label="Footer Background Dark"

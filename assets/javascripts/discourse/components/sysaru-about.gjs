@@ -1,7 +1,7 @@
 import Component from "@glimmer/component";
 import { service } from "@ember/service";
 import { array } from "@ember/helper";
-import AdminConfigAreaCard from "admin/components/admin-config-area-card";
+import AdminConfigAreaCard from "discourse/admin/components/admin-config-area-card";
 import SysaruSettingToggle from "./sysaru/setting-toggle";
 import SysaruSettingText from "./sysaru/setting-text";
 import SysaruSettingColor from "./sysaru/setting-color";
@@ -23,7 +23,7 @@ export default class SysaruAdminAbout extends Component {
         <SysaruSectionDisabledNotice @section="About" />
       {{/unless}}
 
-      <AdminConfigAreaCard @heading="Content">
+      <AdminConfigAreaCard @heading="sysaru.admin.about.content">
         <SysaruSettingToggle
           @settingName="sysaru_about_enabled"
           @label="About Enabled"
@@ -60,7 +60,7 @@ export default class SysaruAdminAbout extends Component {
         />
       </AdminConfigAreaCard>
 
-      <AdminConfigAreaCard @heading="Card Styling">
+      <AdminConfigAreaCard @heading="sysaru.admin.about.card_styling">
         <SysaruSettingColor
           @settingName="sysaru_about_card_color_dark"
           @label="Card Color Dark"
@@ -75,7 +75,7 @@ export default class SysaruAdminAbout extends Component {
         />
       </AdminConfigAreaCard>
 
-      <AdminConfigAreaCard @heading="Section Styling">
+      <AdminConfigAreaCard @heading="sysaru.admin.about.section_styling">
         <SysaruSettingColor
           @settingName="sysaru_about_bg_dark"
           @label="Section Background Dark"

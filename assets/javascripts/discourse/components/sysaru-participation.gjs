@@ -1,7 +1,7 @@
 import Component from "@glimmer/component";
 import { service } from "@ember/service";
 import { array } from "@ember/helper";
-import AdminConfigAreaCard from "admin/components/admin-config-area-card";
+import AdminConfigAreaCard from "discourse/admin/components/admin-config-area-card";
 import SysaruSettingToggle from "./sysaru/setting-toggle";
 import SysaruSettingText from "./sysaru/setting-text";
 import SysaruSettingColor from "./sysaru/setting-color";
@@ -22,7 +22,7 @@ export default class SysaruAdminParticipation extends Component {
         <SysaruSectionDisabledNotice @section="Participation" />
       {{/unless}}
 
-      <AdminConfigAreaCard @heading="General">
+      <AdminConfigAreaCard @heading="sysaru.admin.participation.general">
         <SysaruSettingToggle
           @settingName="sysaru_participation_enabled"
           @label="Participation Enabled"
@@ -49,7 +49,7 @@ export default class SysaruAdminParticipation extends Component {
         />
       </AdminConfigAreaCard>
 
-      <AdminConfigAreaCard @heading="Stat Labels">
+      <AdminConfigAreaCard @heading="sysaru.admin.participation.stat_labels">
         <SysaruSettingText
           @settingName="sysaru_participation_topics_label"
           @label="Topics Label"
@@ -64,7 +64,7 @@ export default class SysaruAdminParticipation extends Component {
         />
       </AdminConfigAreaCard>
 
-      <AdminConfigAreaCard @heading="Styling">
+      <AdminConfigAreaCard @heading="sysaru.admin.participation.styling">
         <SysaruSettingColor
           @settingName="sysaru_participation_icon_color"
           @label="Icon Color"

@@ -1,7 +1,7 @@
 import Component from "@glimmer/component";
 import { service } from "@ember/service";
 import { array } from "@ember/helper";
-import AdminConfigAreaCard from "admin/components/admin-config-area-card";
+import AdminConfigAreaCard from "discourse/admin/components/admin-config-area-card";
 import SysaruSettingToggle from "./sysaru/setting-toggle";
 import SysaruSettingText from "./sysaru/setting-text";
 import SysaruSettingTextarea from "./sysaru/setting-textarea";
@@ -32,7 +32,7 @@ export default class SysaruAdminSplits extends Component {
         <SysaruSectionDisabledNotice @section="FAQ" />
       {{/unless}}
 
-      <AdminConfigAreaCard @heading="Section Background">
+      <AdminConfigAreaCard @heading="sysaru.admin.splits.section_styling">
         <SysaruSettingImageUpload
           @settingName="sysaru_splits_background_image_url"
           @label="Splits Background Image URL"
@@ -53,7 +53,7 @@ export default class SysaruAdminSplits extends Component {
         />
       </AdminConfigAreaCard>
 
-      <AdminConfigAreaCard @heading="Community Spaces">
+      <AdminConfigAreaCard @heading="sysaru.admin.splits.spaces">
         <SysaruSettingToggle
           @settingName="sysaru_groups_enabled"
           @label="Groups Enabled"
@@ -100,7 +100,7 @@ export default class SysaruAdminSplits extends Component {
         />
       </AdminConfigAreaCard>
 
-      <AdminConfigAreaCard @heading="FAQ Accordion">
+      <AdminConfigAreaCard @heading="sysaru.admin.splits.faq">
         <SysaruSettingToggle
           @settingName="sysaru_faq_enabled"
           @label="FAQ Enabled"

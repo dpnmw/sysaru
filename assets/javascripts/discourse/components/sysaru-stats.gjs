@@ -1,7 +1,7 @@
 import Component from "@glimmer/component";
 import { service } from "@ember/service";
 import { array } from "@ember/helper";
-import AdminConfigAreaCard from "admin/components/admin-config-area-card";
+import AdminConfigAreaCard from "discourse/admin/components/admin-config-area-card";
 import SysaruSettingToggle from "./sysaru/setting-toggle";
 import SysaruSettingText from "./sysaru/setting-text";
 import SysaruSettingColor from "./sysaru/setting-color";
@@ -22,7 +22,7 @@ export default class SysaruAdminStats extends Component {
         <SysaruSectionDisabledNotice @section="Stats" />
       {{/unless}}
 
-      <AdminConfigAreaCard @heading="General">
+      <AdminConfigAreaCard @heading="sysaru.admin.stats.general">
         <SysaruSettingToggle
           @settingName="sysaru_stats_enabled"
           @label="Stats Enabled"
@@ -52,7 +52,7 @@ export default class SysaruAdminStats extends Component {
         />
       </AdminConfigAreaCard>
 
-      <AdminConfigAreaCard @heading="Labels">
+      <AdminConfigAreaCard @heading="sysaru.admin.stats.labels">
         <SysaruSettingText
           @settingName="sysaru_stat_members_label"
           @label="Members Label"
@@ -79,7 +79,7 @@ export default class SysaruAdminStats extends Component {
         />
       </AdminConfigAreaCard>
 
-      <AdminConfigAreaCard @heading="Card Styling">
+      <AdminConfigAreaCard @heading="sysaru.admin.stats.card_styling">
         <SysaruSettingColor
           @settingName="sysaru_stat_icon_color"
           @label="Icon Color"
@@ -107,7 +107,7 @@ export default class SysaruAdminStats extends Component {
         />
       </AdminConfigAreaCard>
 
-      <AdminConfigAreaCard @heading="Section Styling">
+      <AdminConfigAreaCard @heading="sysaru.admin.stats.section_styling">
         <SysaruSettingColor
           @settingName="sysaru_stats_bg_dark"
           @label="Section Background Dark"

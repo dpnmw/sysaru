@@ -1,7 +1,7 @@
 import Component from "@glimmer/component";
 import { service } from "@ember/service";
 import { array } from "@ember/helper";
-import AdminConfigAreaCard from "admin/components/admin-config-area-card";
+import AdminConfigAreaCard from "discourse/admin/components/admin-config-area-card";
 import SysaruSettingToggle from "./sysaru/setting-toggle";
 import SysaruSettingText from "./sysaru/setting-text";
 import SysaruSettingColor from "./sysaru/setting-color";
@@ -12,7 +12,7 @@ export default class SysaruAdminNavbar extends Component {
 
   <template>
     <div class="sysaru-admin-navbar">
-      <AdminConfigAreaCard @heading="Auth Buttons">
+      <AdminConfigAreaCard @heading="sysaru.admin.navbar.auth_buttons">
         <SysaruSettingText
           @settingName="sysaru_navbar_signin_label"
           @label="Sign In Label"
@@ -47,7 +47,7 @@ export default class SysaruAdminNavbar extends Component {
         />
       </AdminConfigAreaCard>
 
-      <AdminConfigAreaCard @heading="Appearance">
+      <AdminConfigAreaCard @heading="sysaru.admin.navbar.appearance">
         <SysaruSettingColor
           @settingName="sysaru_navbar_bg_color"
           @label="Navbar Background Color"
@@ -59,7 +59,7 @@ export default class SysaruAdminNavbar extends Component {
         />
       </AdminConfigAreaCard>
 
-      <AdminConfigAreaCard @heading="Social Links">
+      <AdminConfigAreaCard @heading="sysaru.admin.navbar.social_links">
         <SysaruSettingText
           @settingName="sysaru_social_twitter_url"
           @label="Twitter URL"
