@@ -4,6 +4,7 @@ import { action } from "@ember/object";
 import { service } from "@ember/service";
 import { ajax } from "discourse/lib/ajax";
 import { on } from "@ember/modifier";
+import { eq } from "truth-helpers";
 import SysaruSettingRow from "./setting-row";
 
 export default class SysaruSettingEnum extends Component {
@@ -46,14 +47,10 @@ export default class SysaruSettingEnum extends Component {
         {{#each @choices as |choice|}}
           <option
             value={{choice}}
-            selected={{if (this.isSelected choice) true}}
+            selected={{eq choice this.value}}
           >{{choice}}</option>
         {{/each}}
       </select>
     </SysaruSettingRow>
   </template>
-
-  isSelected(choice) {
-    return choice === this.value;
-  }
 }
