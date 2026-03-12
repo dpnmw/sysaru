@@ -1,1 +1,3 @@
-<AdminAreaSettings @plugin="sysaru" @filter="sysaru_participation" />
+{{#each this.model as |setting|}}
+  <SiteSetting @setting={{setting}} />
+{{/each}}
