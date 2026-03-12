@@ -172,11 +172,10 @@ after_initialize do
   end
 
   # ── Public Landing Page Route ──
-  Discourse::Application.routes.prepend do
-    root to: "sysaru/landing#index",
-         constraints: ->(req) {
-           req.cookies["_t"].blank? &&
-             SiteSetting.sysaru_enabled
-         }
-  end
+Discourse::Application.routes.prepend do
+  get "/", to: "sysaru/landing#index",
+      constraints: ->(req) {
+        req.cookies["_t"].blank? &&
+          SiteSetting.sysaru_enabled
+      }
 end
