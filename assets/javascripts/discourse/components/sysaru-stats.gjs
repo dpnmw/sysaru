@@ -23,110 +23,118 @@ export default class SysaruAdminStats extends Component {
       {{/unless}}
 
       <AdminConfigAreaCard @heading="sysaru.admin.stats.general">
-        <SysaruSettingToggle
-          @settingName="sysaru_stats_enabled"
-          @label="Stats Enabled"
-        />
-        <SysaruSettingToggle
-          @settingName="sysaru_stat_labels_enabled"
-          @label="Stat Labels Enabled"
-        />
-        <SysaruSettingToggle
-          @settingName="sysaru_stats_title_enabled"
-          @label="Stats Title Enabled"
-        />
-        <SysaruSettingText
-          @settingName="sysaru_stats_title"
-          @label="Stats Title"
-        />
-        <SysaruSettingInteger
-          @settingName="sysaru_stats_title_size"
-          @label="Stats Title Size"
-          @min={{0}}
-          @max={{80}}
-        />
-        <SysaruSettingEnum
-          @settingName="sysaru_stat_card_style"
-          @label="Stat Card Style"
-          @choices={{(array "rectangle" "rounded" "pill" "minimal")}}
-        />
+        <:content>
+          <SysaruSettingToggle
+            @settingName="sysaru_stats_enabled"
+            @label="Stats Enabled"
+          />
+          <SysaruSettingToggle
+            @settingName="sysaru_stat_labels_enabled"
+            @label="Stat Labels Enabled"
+          />
+          <SysaruSettingToggle
+            @settingName="sysaru_stats_title_enabled"
+            @label="Stats Title Enabled"
+          />
+          <SysaruSettingText
+            @settingName="sysaru_stats_title"
+            @label="Stats Title"
+          />
+          <SysaruSettingInteger
+            @settingName="sysaru_stats_title_size"
+            @label="Stats Title Size"
+            @min={{0}}
+            @max={{80}}
+          />
+          <SysaruSettingEnum
+            @settingName="sysaru_stat_card_style"
+            @label="Stat Card Style"
+            @choices={{(array "rectangle" "rounded" "pill" "minimal")}}
+          />
+        </:content>
       </AdminConfigAreaCard>
 
       <AdminConfigAreaCard @heading="sysaru.admin.stats.labels">
-        <SysaruSettingText
-          @settingName="sysaru_stat_members_label"
-          @label="Members Label"
-        />
-        <SysaruSettingText
-          @settingName="sysaru_stat_topics_label"
-          @label="Topics Label"
-        />
-        <SysaruSettingText
-          @settingName="sysaru_stat_posts_label"
-          @label="Posts Label"
-        />
-        <SysaruSettingText
-          @settingName="sysaru_stat_likes_label"
-          @label="Likes Label"
-        />
-        <SysaruSettingText
-          @settingName="sysaru_stat_chats_label"
-          @label="Chats Label"
-        />
-        <SysaruSettingToggle
-          @settingName="sysaru_stat_round_numbers"
-          @label="Round Numbers"
-        />
+        <:content>
+          <SysaruSettingText
+            @settingName="sysaru_stat_members_label"
+            @label="Members Label"
+          />
+          <SysaruSettingText
+            @settingName="sysaru_stat_topics_label"
+            @label="Topics Label"
+          />
+          <SysaruSettingText
+            @settingName="sysaru_stat_posts_label"
+            @label="Posts Label"
+          />
+          <SysaruSettingText
+            @settingName="sysaru_stat_likes_label"
+            @label="Likes Label"
+          />
+          <SysaruSettingText
+            @settingName="sysaru_stat_chats_label"
+            @label="Chats Label"
+          />
+          <SysaruSettingToggle
+            @settingName="sysaru_stat_round_numbers"
+            @label="Round Numbers"
+          />
+        </:content>
       </AdminConfigAreaCard>
 
       <AdminConfigAreaCard @heading="sysaru.admin.stats.card_styling">
-        <SysaruSettingColor
-          @settingName="sysaru_stat_icon_color"
-          @label="Icon Color"
-        />
-        <SysaruSettingColor
-          @settingName="sysaru_stat_icon_bg_color"
-          @label="Icon Background Color"
-        />
-        <SysaruSettingEnum
-          @settingName="sysaru_stat_icon_shape"
-          @label="Icon Shape"
-          @choices={{(array "circle" "rounded")}}
-        />
-        <SysaruSettingColor
-          @settingName="sysaru_stat_counter_color"
-          @label="Counter Color"
-        />
-        <SysaruSettingColor
-          @settingName="sysaru_stat_card_bg_dark"
-          @label="Card Background Dark"
-        />
-        <SysaruSettingColor
-          @settingName="sysaru_stat_card_bg_light"
-          @label="Card Background Light"
-        />
+        <:content>
+          <SysaruSettingColor
+            @settingName="sysaru_stat_icon_color"
+            @label="Icon Color"
+          />
+          <SysaruSettingColor
+            @settingName="sysaru_stat_icon_bg_color"
+            @label="Icon Background Color"
+          />
+          <SysaruSettingEnum
+            @settingName="sysaru_stat_icon_shape"
+            @label="Icon Shape"
+            @choices={{(array "circle" "rounded")}}
+          />
+          <SysaruSettingColor
+            @settingName="sysaru_stat_counter_color"
+            @label="Counter Color"
+          />
+          <SysaruSettingColor
+            @settingName="sysaru_stat_card_bg_dark"
+            @label="Card Background Dark"
+          />
+          <SysaruSettingColor
+            @settingName="sysaru_stat_card_bg_light"
+            @label="Card Background Light"
+          />
+        </:content>
       </AdminConfigAreaCard>
 
       <AdminConfigAreaCard @heading="sysaru.admin.stats.section_styling">
-        <SysaruSettingColor
-          @settingName="sysaru_stats_bg_dark"
-          @label="Section Background Dark"
-        />
-        <SysaruSettingColor
-          @settingName="sysaru_stats_bg_light"
-          @label="Section Background Light"
-        />
-        <SysaruSettingInteger
-          @settingName="sysaru_stats_min_height"
-          @label="Min Height"
-          @min={{0}}
-          @max={{2000}}
-        />
-        <SysaruSettingEnum
-          @settingName="sysaru_stats_border_style"
-          @label="Border Style"
-          @choices={{(array "none" "solid" "dashed" "dotted")}}
-        />
+        <:content>
+          <SysaruSettingColor
+            @settingName="sysaru_stats_bg_dark"
+            @label="Section Background Dark"
+          />
+          <SysaruSettingColor
+            @settingName="sysaru_stats_bg_light"
+            @label="Section Background Light"
+          />
+          <SysaruSettingInteger
+            @settingName="sysaru_stats_min_height"
+            @label="Min Height"
+            @min={{0}}
+            @max={{2000}}
+          />
+          <SysaruSettingEnum
+            @settingName="sysaru_stats_border_style"
+            @label="Border Style"
+            @choices={{(array "none" "solid" "dashed" "dotted")}}
+          />
+        </:content>
       </AdminConfigAreaCard>
     </div>
   </template>

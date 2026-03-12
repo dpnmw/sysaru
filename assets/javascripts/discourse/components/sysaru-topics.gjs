@@ -23,58 +23,62 @@ export default class SysaruAdminTopics extends Component {
       {{/unless}}
 
       <AdminConfigAreaCard @heading="sysaru.admin.topics.content">
-        <SysaruSettingToggle
-          @settingName="sysaru_topics_enabled"
-          @label="Topics Enabled"
-        />
-        <SysaruSettingToggle
-          @settingName="sysaru_topics_title_enabled"
-          @label="Topics Title Enabled"
-        />
-        <SysaruSettingText
-          @settingName="sysaru_topics_title"
-          @label="Topics Title"
-        />
-        <SysaruSettingInteger
-          @settingName="sysaru_topics_title_size"
-          @label="Topics Title Size"
-          @min={{0}}
-          @max={{80}}
-        />
-        <SysaruSettingInteger
-          @settingName="sysaru_topics_count"
-          @label="Topics Count"
-        />
+        <:content>
+          <SysaruSettingToggle
+            @settingName="sysaru_topics_enabled"
+            @label="Topics Enabled"
+          />
+          <SysaruSettingToggle
+            @settingName="sysaru_topics_title_enabled"
+            @label="Topics Title Enabled"
+          />
+          <SysaruSettingText
+            @settingName="sysaru_topics_title"
+            @label="Topics Title"
+          />
+          <SysaruSettingInteger
+            @settingName="sysaru_topics_title_size"
+            @label="Topics Title Size"
+            @min={{0}}
+            @max={{80}}
+          />
+          <SysaruSettingInteger
+            @settingName="sysaru_topics_count"
+            @label="Topics Count"
+          />
+        </:content>
       </AdminConfigAreaCard>
 
       <AdminConfigAreaCard @heading="sysaru.admin.topics.styling">
-        <SysaruSettingColor
-          @settingName="sysaru_topics_card_bg_dark"
-          @label="Card Background Dark"
-        />
-        <SysaruSettingColor
-          @settingName="sysaru_topics_card_bg_light"
-          @label="Card Background Light"
-        />
-        <SysaruSettingColor
-          @settingName="sysaru_topics_bg_dark"
-          @label="Section Background Dark"
-        />
-        <SysaruSettingColor
-          @settingName="sysaru_topics_bg_light"
-          @label="Section Background Light"
-        />
-        <SysaruSettingInteger
-          @settingName="sysaru_topics_min_height"
-          @label="Min Height"
-          @min={{0}}
-          @max={{2000}}
-        />
-        <SysaruSettingEnum
-          @settingName="sysaru_topics_border_style"
-          @label="Border Style"
-          @choices={{(array "none" "solid" "dashed" "dotted")}}
-        />
+        <:content>
+          <SysaruSettingColor
+            @settingName="sysaru_topics_card_bg_dark"
+            @label="Card Background Dark"
+          />
+          <SysaruSettingColor
+            @settingName="sysaru_topics_card_bg_light"
+            @label="Card Background Light"
+          />
+          <SysaruSettingColor
+            @settingName="sysaru_topics_bg_dark"
+            @label="Section Background Dark"
+          />
+          <SysaruSettingColor
+            @settingName="sysaru_topics_bg_light"
+            @label="Section Background Light"
+          />
+          <SysaruSettingInteger
+            @settingName="sysaru_topics_min_height"
+            @label="Min Height"
+            @min={{0}}
+            @max={{2000}}
+          />
+          <SysaruSettingEnum
+            @settingName="sysaru_topics_border_style"
+            @label="Border Style"
+            @choices={{(array "none" "solid" "dashed" "dotted")}}
+          />
+        </:content>
       </AdminConfigAreaCard>
     </div>
   </template>

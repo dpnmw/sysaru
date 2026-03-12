@@ -33,111 +33,117 @@ export default class SysaruAdminSplits extends Component {
       {{/unless}}
 
       <AdminConfigAreaCard @heading="sysaru.admin.splits.section_styling">
-        <SysaruSettingImageUpload
-          @settingName="sysaru_splits_background_image_url"
-          @label="Splits Background Image URL"
-        />
-        <SysaruSettingColor
-          @settingName="sysaru_splits_bg_dark"
-          @label="Section Background Dark"
-        />
-        <SysaruSettingColor
-          @settingName="sysaru_splits_bg_light"
-          @label="Section Background Light"
-        />
-        <SysaruSettingInteger
-          @settingName="sysaru_splits_min_height"
-          @label="Min Height"
-          @min={{0}}
-          @max={{800}}
-        />
+        <:content>
+          <SysaruSettingImageUpload
+            @settingName="sysaru_splits_background_image_url"
+            @label="Splits Background Image URL"
+          />
+          <SysaruSettingColor
+            @settingName="sysaru_splits_bg_dark"
+            @label="Section Background Dark"
+          />
+          <SysaruSettingColor
+            @settingName="sysaru_splits_bg_light"
+            @label="Section Background Light"
+          />
+          <SysaruSettingInteger
+            @settingName="sysaru_splits_min_height"
+            @label="Min Height"
+            @min={{0}}
+            @max={{800}}
+          />
+        </:content>
       </AdminConfigAreaCard>
 
       <AdminConfigAreaCard @heading="sysaru.admin.splits.spaces">
-        <SysaruSettingToggle
-          @settingName="sysaru_groups_enabled"
-          @label="Groups Enabled"
-        />
-        <SysaruSettingToggle
-          @settingName="sysaru_groups_title_enabled"
-          @label="Groups Title Enabled"
-        />
-        <SysaruSettingText
-          @settingName="sysaru_groups_title"
-          @label="Groups Title"
-        />
-        <SysaruSettingInteger
-          @settingName="sysaru_groups_title_size"
-          @label="Groups Title Size"
-          @min={{0}}
-          @max={{80}}
-        />
-        <SysaruSettingInteger
-          @settingName="sysaru_groups_count"
-          @label="Groups Count"
-        />
-        <SysaruSettingList
-          @settingName="sysaru_groups_selected"
-          @label="Selected Groups"
-        />
-        <SysaruSettingToggle
-          @settingName="sysaru_groups_show_description"
-          @label="Show Description"
-        />
-        <SysaruSettingInteger
-          @settingName="sysaru_groups_description_max_length"
-          @label="Description Max Length"
-          @min={{30}}
-          @max={{500}}
-        />
-        <SysaruSettingColor
-          @settingName="sysaru_groups_card_bg_dark"
-          @label="Groups Card Background Dark"
-        />
-        <SysaruSettingColor
-          @settingName="sysaru_groups_card_bg_light"
-          @label="Groups Card Background Light"
-        />
+        <:content>
+          <SysaruSettingToggle
+            @settingName="sysaru_groups_enabled"
+            @label="Groups Enabled"
+          />
+          <SysaruSettingToggle
+            @settingName="sysaru_groups_title_enabled"
+            @label="Groups Title Enabled"
+          />
+          <SysaruSettingText
+            @settingName="sysaru_groups_title"
+            @label="Groups Title"
+          />
+          <SysaruSettingInteger
+            @settingName="sysaru_groups_title_size"
+            @label="Groups Title Size"
+            @min={{0}}
+            @max={{80}}
+          />
+          <SysaruSettingInteger
+            @settingName="sysaru_groups_count"
+            @label="Groups Count"
+          />
+          <SysaruSettingList
+            @settingName="sysaru_groups_selected"
+            @label="Selected Groups"
+          />
+          <SysaruSettingToggle
+            @settingName="sysaru_groups_show_description"
+            @label="Show Description"
+          />
+          <SysaruSettingInteger
+            @settingName="sysaru_groups_description_max_length"
+            @label="Description Max Length"
+            @min={{30}}
+            @max={{500}}
+          />
+          <SysaruSettingColor
+            @settingName="sysaru_groups_card_bg_dark"
+            @label="Groups Card Background Dark"
+          />
+          <SysaruSettingColor
+            @settingName="sysaru_groups_card_bg_light"
+            @label="Groups Card Background Light"
+          />
+        </:content>
       </AdminConfigAreaCard>
 
       <AdminConfigAreaCard @heading="sysaru.admin.splits.faq">
-        <SysaruSettingToggle
-          @settingName="sysaru_faq_enabled"
-          @label="FAQ Enabled"
-        />
-        <SysaruSettingToggle
-          @settingName="sysaru_faq_title_enabled"
-          @label="FAQ Title Enabled"
-        />
-        <SysaruSettingText
-          @settingName="sysaru_faq_title"
-          @label="FAQ Title"
-        />
-        <SysaruSettingInteger
-          @settingName="sysaru_faq_title_size"
-          @label="FAQ Title Size"
-          @min={{0}}
-          @max={{80}}
-        />
-        <SysaruSettingTextarea
-          @settingName="sysaru_faq_items"
-          @label="FAQ Items"
-          @rows={{6}}
-        />
-        <SysaruSettingColor
-          @settingName="sysaru_faq_card_bg_dark"
-          @label="FAQ Card Background Dark"
-        />
-        <SysaruSettingColor
-          @settingName="sysaru_faq_card_bg_light"
-          @label="FAQ Card Background Light"
-        />
-        <SysaruSettingInteger
-          @settingName="sysaru_faq_mobile_max_height"
-          @label="FAQ Mobile Max Height"
-          @min={{0}}
-          @max={{1200}}
-        />
+        <:content>
+          <SysaruSettingToggle
+            @settingName="sysaru_faq_enabled"
+            @label="FAQ Enabled"
+          />
+          <SysaruSettingToggle
+            @settingName="sysaru_faq_title_enabled"
+            @label="FAQ Title Enabled"
+          />
+          <SysaruSettingText
+            @settingName="sysaru_faq_title"
+            @label="FAQ Title"
+          />
+          <SysaruSettingInteger
+            @settingName="sysaru_faq_title_size"
+            @label="FAQ Title Size"
+            @min={{0}}
+            @max={{80}}
+          />
+          <SysaruSettingTextarea
+            @settingName="sysaru_faq_items"
+            @label="FAQ Items"
+            @rows={{6}}
+          />
+          <SysaruSettingColor
+            @settingName="sysaru_faq_card_bg_dark"
+            @label="FAQ Card Background Dark"
+          />
+          <SysaruSettingColor
+            @settingName="sysaru_faq_card_bg_light"
+            @label="FAQ Card Background Light"
+          />
+          <SysaruSettingInteger
+            @settingName="sysaru_faq_mobile_max_height"
+            @label="FAQ Mobile Max Height"
+            @min={{0}}
+            @max={{1200}}
+          />
+        </:content>
       </AdminConfigAreaCard>
     </div>
   </template>
